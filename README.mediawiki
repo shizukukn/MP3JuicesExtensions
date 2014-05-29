@@ -1,0 +1,5 @@
+= MP3Juices Extensions =
+
+== License ==
+* MIT License
+* Copyright &copy; 2014 KONO Shizuku.

@@ -1,0 +1,37 @@
+{
+  "name": "MP3Juices Extension",
+  "description": "MP3Juices を快適に使うための拡張機能",
+  "icons": { },
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "background": {
+    "scripts": [
+      "background/js/block.js"
+    ]
+  },
+  "content_scripts": [
+    {
+    "matches": ["http://mp3juices.com/search/*"],
+    "css"    : [
+      "content_scripts/css/dl_manager.css"
+    ],
+    "js"     : [
+      "vendor/js/zepto.min.js",
+      "vendor/js/underscore-min.js",
+      "vendor/js/url.min.js",
+      "content_scripts/js/search.js"
+    ],
+    "run_at" : "document_start",
+    "all_frames": false
+    }
+  ],
+  "permissions": [
+    "http://mp3juices.com/*",
+    "http://s.ad2387.com/*",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "web_accessible_resources": [
+    "vendor/js/*.map"
+  ]
+}

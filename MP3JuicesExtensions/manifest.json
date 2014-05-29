@@ -18,7 +18,6 @@
     "js"     : [
       "vendor/js/zepto.min.js",
       "vendor/js/underscore-min.js",
-      "vendor/js/url.min.js",
       "content_scripts/js/search.js"
     ],
     "run_at" : "document_start",

@@ -21,7 +21,7 @@
     },
     {
       urls: [
-        
+        AD_URL
       ],
       types: ['script']
     },

@@ -1,7 +1,10 @@
 {
   "name": "MP3Juices Extension",
   "description": "MP3Juices を快適に使うための拡張機能",
-  "icons": { },
+  "icons": {
+    "128": "assets/icons/icon128.png",
+    "48": "assets/icons/icon48.png"
+  },
   "version": "1.0.0",
   "manifest_version": 2,
   "background": {

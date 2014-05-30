@@ -1,6 +1,6 @@
 {
   "name": "MP3Juices Extension",
-  "description": "Download Manager を無効化 / ポップアップ広告をブロック",
+  "description": "Disable download manager / Blocking pop-up ads",
   "author": "KONO Shizuku",
   "icons": {
     "128": "assets/icons/icon128.png",

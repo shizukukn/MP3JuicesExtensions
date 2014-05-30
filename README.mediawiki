@@ -1,5 +1,12 @@
 = MP3Juices Extensions =
 
+== Install ==
+https://chrome.google.com/webstore/detail/mp3juices-extension/eggfaaclmbhnlhfcmfgnmdlaggpicecg?hl=ja
+
+== Used library ==
+* [http://zeptojs.com Zepto.js]
+* [http://underscorejs.org Underscore.js]
+
 == License ==
 * MIT License
 * Copyright &copy; 2014 KONO Shizuku.

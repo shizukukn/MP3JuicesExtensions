@@ -29,7 +29,7 @@
   // ダウンロードボタンを作成する
   var createDownloadButtons = function (downloadButtons) {
     downloadButtons.each(function () {
-      // 既に処理済みない場合
+      // 既に処理済みな場合
       if ($(this).attr('data-processed')) { return; }
       
       // 既存ボタンに被せるように要素を配置

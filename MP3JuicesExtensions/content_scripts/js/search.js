@@ -9,7 +9,7 @@
   var DOWNLOAD_URL     = 'input[name*=url]';
   var NEW_DOWNLOAD_BUTTON_ZINDEX = 1000;
   
-  var onDomContentLoaded = false;
+  var onDomContentLoaded  = false;
   var downloadButtonCount = 0;
   
   // イベントキャンセルの処理
@@ -58,7 +58,7 @@
   };
   
   // ボタンのロード終了を待機する
-  var checkButtonLoaded = function (){
+  var checkButtonLoaded = function () {
     var downloadButtons = $(DOWNLOAD_BUTTONS);
     
     if (downloadButtons.length > 0) {

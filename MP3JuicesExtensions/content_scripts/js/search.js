@@ -22,15 +22,15 @@
   var downloadDirect = function (event) {
     cancelEvent(event);
     
-    var url = $(this).closest('tr').find(DOWNLOAD_URL).val();
+    var url = $(event.target).closest('tr').find(DOWNLOAD_URL).val();
     location.href = url;
   };
   
   // ダウンロードボタンを作成する
   var createDownloadButtons = function (downloadButtons) {
-    downloadButtons.each(function () {
+    _.each(downloadButtons, function (elem) {
       // 既に処理済みな場合
-      if ($(this).attr('data-processed')) { return; }
+      if ($(elem).attr('data-processed')) { return; }
       
       // 既存ボタンに被せるように要素を配置
       var newLink = $('<span />');
@@ -38,9 +38,9 @@
       newLink.css({
         display: 'block',
         position: 'absolute',
-        width: $(this).width() + "px",
-        height: $(this).height() + "px",
-        margin: $(this).css('margin'),
+        width: $(elem).width() + "px",
+        height: $(elem).height() + "px",
+        margin: $(elem).css('margin'),
         zIndex: NEW_DOWNLOAD_BUTTON_ZINDEX,
         cursor: 'pointer'
       });
@@ -50,10 +50,10 @@
       newLink.click(downloadDirect);
       
       // 要素を追加
-      $(this).after(newLink);
+      $(elem).after(newLink);
       
       // 処理済みとしてマーク
-      $(this).attr('data-processed', true);
+      $(elem).attr('data-processed', true);
     });
   };
   

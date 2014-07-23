@@ -41,7 +41,8 @@
         width: $(this).width() + "px",
         height: $(this).height() + "px",
         margin: $(this).css('margin'),
-        zIndex: NEW_DOWNLOAD_BUTTON_ZINDEX
+        zIndex: NEW_DOWNLOAD_BUTTON_ZINDEX,
+        cursor: 'pointer'
       });
       
       newLink.mousedown(cancelEvent);

@@ -4,8 +4,8 @@
 !function () {
   'use strict';
   
-  var REFERER_FILTER = 'http://mp3juices.com/';
-  var AD_URL = 'http://s.ad2387.com/*';
+  var REFERER_FILTER = 'http://mp3juices.to/';
+  var AD_URLS = ['http://s.ad2387.com/*', 'http://clkmon.com/*'];
   
   chrome.webRequest.onBeforeSendHeaders.addListener(
     function (details) {
@@ -20,9 +20,7 @@
       }
     },
     {
-      urls: [
-        AD_URL
-      ],
+      urls: AD_URLS,
       types: ['script']
     },
     ['requestHeaders', 'blocking']

@@ -4,18 +4,23 @@
 !function () {
   'use strict';
   
-  var REFERER_FILTER = 'http://mp3juices.to/';
-  var AD_URLS = ['http://s.ad2387.com/*', 'http://clkmon.com/*'];
+  var REFERER_DOMAINS = [
+    'mp3juices.to',
+    'mp3juices.unblocked.pw'
+  ];
+  var AD_URLS = ['*://s.ad2387.com/*', '*://clkmon.com/*'];
   
   chrome.webRequest.onBeforeSendHeaders.addListener(
     function (details) {
       for (var i = 0; i < details.requestHeaders.length; ++i){
         var header = details.requestHeaders[i];
         
-        if (header.name == 'Referer' &&
-            header.value.indexOf(REFERER_FILTER) === 0) // 前方一致
-        {
-          return { cancel: true };
+        for (var j = 0; j < REFERER_DOMAINS.length; ++j) {
+          if (header.name == 'Referer' &&
+              header.value.indexOf('//' + REFERER_DOMAINS[j]) > -1) // ドメイン一致
+          {
+            return { cancel: true };
+          }
         }
       }
     },

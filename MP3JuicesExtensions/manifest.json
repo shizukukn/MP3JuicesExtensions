@@ -1,12 +1,12 @@
 {
   "name": "MP3Juices Extension",
   "description": "Disable download manager / Blocking pop-up ads",
-  "author": "KONO Shizuku",
+  "author": "Shizuku Kono",
   "icons": {
     "128": "assets/icons/icon128.png",
     "48": "assets/icons/icon48.png"
   },
-  "version": "1.2.0.0",
+  "version": "1.2.1.0",
   "manifest_version": 2,
   "background": {
     "scripts": [
@@ -15,7 +15,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://mp3juices.to/search/*"],
+      "matches": [
+        "*://mp3juices.to/mp3/*",
+        "*://mp3juices.unblocked.pw/mp3/*"
+        ],
       "css"    : [
         "content_scripts/css/dl_manager.css"
       ],
@@ -28,7 +31,10 @@
       "all_frames": false
     },
     {
-      "matches": ["http://mp3juices.to/*"],
+      "matches": [
+        "*://mp3juices.to/*",
+        "*://mp3juices.unblocked.pw/*"
+        ],
       "css"    : [
         "content_scripts/css/vaudix.css"
       ],
@@ -37,9 +43,10 @@
     }
   ],
   "permissions": [
-    "http://mp3juices.to/*",
-    "http://s.ad2387.com/*",
-    "http://clkmon.com/*",
+    "*://mp3juices.to/*",
+    "*://mp3juices.unblocked.pw/*",
+    "*://s.ad2387.com/*",
+    "*://clkmon.com/*",
     "webRequest",
     "webRequestBlocking"
   ],

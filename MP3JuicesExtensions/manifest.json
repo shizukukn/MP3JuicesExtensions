@@ -20,7 +20,8 @@
         "*://mp3juices.unblocked.pw/mp3/*"
         ],
       "css"    : [
-        "content_scripts/css/dl_manager.css"
+        "content_scripts/css/dl_manager.css",
+        "content_scripts/css/ad.css"
       ],
       "js"     : [
         "vendor/js/zepto.min.js",

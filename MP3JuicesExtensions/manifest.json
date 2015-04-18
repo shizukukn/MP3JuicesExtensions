@@ -17,7 +17,9 @@
     {
       "matches": [
         "*://mp3juices.to/mp3/*",
-        "*://mp3juices.unblocked.pw/mp3/*"
+        "*://mp3juices.to/find*",
+        "*://mp3juices.unblocked.pw/mp3/*",
+        "*://mp3juices.unblocked.pw/find*"
         ],
       "css"    : [
         "content_scripts/css/dl_manager.css",

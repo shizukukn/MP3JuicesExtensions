@@ -8,7 +8,11 @@
     'mp3juices.to',
     'mp3juices.unblocked.pw'
   ];
-  var AD_URLS = ['*://s.ad2387.com/*', '*://clkmon.com/*'];
+  var AD_URLS = [
+    '*://s.ad2387.com/*',
+    '*://clkmon.com/*',
+    '*://go.oclaserver.com/apu.php/*'
+  ];
   
   chrome.webRequest.onBeforeSendHeaders.addListener(
     function (details) {
